@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FCWpf.Windows"
+        xmlns:UserControls="clr-namespace:FCWpf.UserControls" x:Class="FCWpf.Windows.CCreateWindow"
+        mc:Ignorable="d" Height="434.5" Width="224.5" WindowStyle="None" ResizeMode="NoResize">
+    <Grid>
+        <Label x:Name="labelFamily" Content="Фамилия" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxFamily" HorizontalAlignment="Left" Height="23" Margin="90,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelName" Content="Имя" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="90,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelPatronymic" Content="Отчество" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxPatronymic" HorizontalAlignment="Left" Height="23" Margin="90,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelPost" Content="Должность" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox x:Name="textBoxPost" HorizontalAlignment="Left" Height="23" Margin="10,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
+        <Label x:Name="labelOrganization" Content="Организация" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox x:Name="textBoxOrganization" HorizontalAlignment="Left" Height="23" Margin="10,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" IsEnabled="False"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" Width="200" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Физическое лицо"/>
+            <ComboBoxItem Content="Юридическое лицо"/>
+        </ComboBox>
+        <GroupBox x:Name="groupBox" Header="Контакты" HorizontalAlignment="Left" Height="135" Margin="10,244,0,0" VerticalAlignment="Top" Width="200">
+            <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="87" VerticalAlignment="Top" Width="187" MouseDoubleClick="ListBox_MouseDoubleClick"/>
+        </GroupBox>
+        <Button x:Name="buttonAddContact" Content="Добавить" HorizontalAlignment="Left" Margin="17,353,0,0" VerticalAlignment="Top" Width="75" Click="ButtonAddContact_Click"/>
+        <Button x:Name="buttonRemoveContact" Content="Удалить" HorizontalAlignment="Left" Margin="128,353,0,0" VerticalAlignment="Top" Width="75" Click="ButtonRemoveContact_Click"/>
+        <Button x:Name="buttonAccept" Content="Принять" HorizontalAlignment="Left" Margin="17,402,0,0" VerticalAlignment="Top" Width="75" Click="ButtonAccept_Click"/>
+        <Button x:Name="buttonCancel" Content="Отмена" HorizontalAlignment="Left" Margin="128,402,0,0" VerticalAlignment="Top" Width="75" Click="ButtonCancel_Click"/>
+    </Grid>
+</Window>
